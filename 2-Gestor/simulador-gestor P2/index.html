@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Gestor - Porta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="header-content">
+            <div class="header-left">
+                <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <div class="logo-section">
+                    <div class="logo-circle">Porta</div>
+                    <span class="app-title">Simulador de Gestor</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <span>NU</span>
+                <span>Nuevo Usuario</span>
+                <button class="exit-button">Salir <link rel="stylesheet" href="../../1-simulador-portabilidad/index.html"></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-section">
+                    <div class="sidebar-title">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        Trámites Portabilidad
+                    </div>
+                    <div class="sidebar-items">
+                        <div class="sidebar-item">
+                            <div class="sidebar-item-icon"></div>
+                            Llamado Porta In
+                        </div>
+                        <div class="sidebar-item">
+                            <div class="sidebar-item-icon"></div>
+                            Llamado Porta Lead
+                        </div>
+                        <div class="sidebar-item">
+                            <div class="sidebar-item-icon"></div>
+                            Trámite Referido Out
+                        </div>
+                        <div class="sidebar-item">
+                            <div class="sidebar-item-icon"></div>
+                            Agenda Personal
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="sidebar-title">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"></polyline>
+                        </svg>
+                        Trámites Voz
+                    </div>
+                    <div class="sidebar-items">
+                        <div class="sidebar-item">
+                            <div class="sidebar-item-icon"></div>
+                            Llamado Voz In
+                        </div>
+                        <div class="sidebar-item">
+                            <div class="sidebar-item-icon"></div>
+                            Llamado Voz Out
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="sidebar-title">Trámites BAF</div>
+                    <div class="sidebar-items">
+                        <div class="sidebar-item">
+                            <div class="sidebar-item-icon"></div>
+                            BAF In
+                        </div>
+                        <div class="sidebar-item">
+                            <div class="sidebar-item-icon"></div>
+                            BAF Out
+                        </div>
+                        <div class="sidebar-item">
+                            <div class="sidebar-item-icon"></div>
+                            BAF Lead
+                        </div>
+                        <div class="sidebar-item">
+                            <div class="sidebar-item-icon"></div>
+                            Referidos
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plus button -->
+            <div class="plus-button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <div class="content-inner">
+                <!-- Header Info -->
+                <div class="info-header">
+                    <div class="info-header-content">
+                        <div class="info-left">
+                            <div class="user-avatar">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                            </div>
+                            <div>
+                                <div id="current-datetime" class="datetime"></div>
+                            </div>
+                        </div>
+                        <div class="info-right">
+                            <div class="status-info">
+                                <svg class="edit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                </svg>
+                                <span>Estado:</span>
+                                <span class="status-badge">1</span>
+                            </div>
+                            <div class="active-status">
+                                <div class="status-dot"></div>
+                                <span>ACTIVA</span>
+                                <span id="status-datetime" class="status-time"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-container">
+                    <!-- Información General -->
+                    <div class="form-section">
+                        <div class="form-header">
+                            <h3>Información general</h3>
+                        </div>
+                        <div class="form-content">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Tipo de Documento</label>
+                                    <div class="input-with-icon">
+                                        <select id="tipoDocumento">
+                                            <option value="DNI">DNI</option>
+                                            <option value="CUIL">CUIL</option>
+                                            <option value="CUIT">CUIT</option>
+                                        </select>
+                                        <svg class="edit-icon-small" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Nro. Documento</label>
+                                    <div class="input-with-icon">
+                                        <input type="text" id="numeroDocumento">
+                                        <svg class="edit-icon-small" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Fecha de nac.</label>
+                                    <div class="input-with-icon">
+                                        <input type="date" id="fechaNacimiento">
+                                        <svg class="edit-icon-small" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Sexo</label>
+                                    <div class="input-with-icon">
+                                        <select id="sexo">
+                                            <option value="">Seleccionar</option>
+                                            <option value="M">Masculino</option>
+                                            <option value="F">Femenino</option>
+                                        </select>
+                                        <svg class="edit-icon-small" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Nom a Portar</label>
+                                <div class="input-with-icons">
+                                    <input type="text" id="nombrePortar">
+                                    <div class="orange-indicator"></div>
+                                    <svg class="edit-icon-small" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Teléf. adic.</label>
+                                <div class="input-with-icons">
+                                    <input type="text" id="telefonoAdicional">
+                                    <div class="orange-indicator"></div>
+                                    <svg class="edit-icon-small" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Email</label>
+                                <div class="input-with-icon">
+                                    <input type="email" id="email" value="digital@claro.com">
+                                    <svg class="edit-icon-small" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Empresa Orig.</label>
+                                <div class="input-with-icon">
+                                    <input type="text" id="empresaOrigen">
+                                    <svg class="edit-icon-small" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Cuenta a afiliar</label>
+                                <div class="input-with-icon">
+                                    <input type="text" id="cuentaAfiliar">
+                                    <svg class="edit-icon-small" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Mercado orig.</label>
+                                <div class="input-with-icon">
+                                    <input type="text" id="mercadoOrigen">
+                                    <svg class="edit-icon-small" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Nro. PIN</label>
+                                    <input type="text" id="numeroPIN" placeholder="Nro. PIN">
+                                </div>
+                                <div class="form-group">
+                                    <label>Fecha expiración PIN</label>
+                                    <div class="date-input-container">
+                                        <input type="date" id="fechaExpiracionPIN" placeholder="Fecha expiración PIN (dd/mm/yyyy)">
+                                        <svg class="calendar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gestión de Plan -->
+                    <div class="form-section">
+                        <div class="form-header">
+                            <h3>Gestión de plan</h3>
+                        </div>
+                        <div class="form-content">
+                            <div class="form-group">
+                                <label>Mercado dest. *</label>
+                                <select id="mercadoDestino">
+                                    <option value="">Seleccionar</option>
+                                    <option value="Postpago">Postpago</option>
+                                    <option value="Prepago">Prepago</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Campaña *</label>
+                                <select id="campana">
+                                    <option value="">Seleccionar</option>
+                                    <option value="TLMPC1">TLMPC1</option>
+                                    <option value="TLMPC2">TLMPC2</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Promoción *</label>
+                                <select id="promocion">
+                                    <option value="">Seleccionar</option>
+                                    <option value="3055">3055</option>
+                                    <option value="4001">4001</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Abono elegido *</label>
+                                <select id="abonoElegido">
+                                    <option value="">Seleccionar</option>
+                                    <option value="A061C">A061C</option>
+                                    <option value="A062C">A062C</option>
+                                    <option value="A063C">A063C</option>
+                                    <option value="A064C">A064C</option>
+                                    <option value="A065C">A065C</option>
+                                    <option value="A066C">A066C</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="switch-label">Tipo de gestión</label>
+                                <div class="switch-container">
+                                    <span>Múltiple</span>
+                                    <label class="switch">
+                                        <input type="checkbox" id="tipoGestionMultiple">
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="section-divider">
+                                <h4>Domicilio de envío</h4>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Calle *</label>
+                                <input type="text" id="calle">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Nro. *</label>
+                                    <input type="text" id="numero">
+                                </div>
+                                <div class="form-group">
+                                    <label>Piso</label>
+                                    <input type="text" id="piso">
+                                </div>
+                                <div class="form-group">
+                                    <label>Depto</label>
+                                    <input type="text" id="depto">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>País *</label>
+                                <select id="pais">
+                                    <option value="">Seleccionar</option>
+                                    <option value="Argentina">Argentina</option>
+                                    <option value="Chile">Chile</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Provincia *</label>
+                                <select id="provincia">
+                                    <option value="">Seleccionar</option>
+                                    <option value="Buenos Aires">Buenos Aires</option>
+                                    <option value="CABA">CABA</option>
+                                    <option value="Córdoba">Córdoba</option>
+                                    <option value="Santa Fe">Santa Fe</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Localidad *</label>
+                                <select id="localidad">
+                                    <option value="">Seleccionar</option>
+                                    <option value="CABA">CABA</option>
+                                    <option value="La Plata">La Plata</option>
+                                    <option value="Córdoba Capital">Córdoba Capital</option>
+                                    <option value="Rosario">Rosario</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>CP *</label>
+                                <input type="text" id="codigoPostal">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Observaciones para el cartero *</label>
+                                <textarea id="observaciones" rows="2" placeholder="Observaciones para el cartero"></textarea>
+                                <div class="char-counter">0 / 50</div>
+                            </div>
+
+                            <div class="frecuenciador-btn">
+                                <svg class="calendar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                Ver frecuenciador
+                            </div>
+
+                            <div class="form-group">
+                                <label>Franja horaria *</label>
+                                <select id="franjaHoraria">
+                                    <option value="">Seleccionar franja horaria</option>
+                                    <option value="9-15hs">9-15hs</option>
+                                    <option value="15-18hs">15-18hs</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Observaciones</label>
+                                <textarea id="observacionesGenerales" rows="2" placeholder="Observaciones generales"></textarea>
+                            </div>
+
+                            <div class="historial-btn">
+                                Ver historial de observaciones
+                            </div>
+
+                            <div class="form-group">
+                                <label>Origen</label>
+                                <input type="text" id="origen" value="Porta Out">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Verificación</label>
+                                <div class="mic-container">
+                                    <svg class="mic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                                        <line x1="12" y1="19" x2="12" y2="23"></line>
+                                        <line x1="8" y1="23" x2="16" y2="23"></line>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Envío de mensaje -->
+                <div class="message-section">
+                    <div class="form-header">
+                        <h3>Envío de mensaje para carga de Documentación</h3>
+                    </div>
+                    <div class="form-content">
+                        <div class="message-info">
+                            Indique el número de teléfono a donde desea enviar el mensaje
+                        </div>
+                        <div class="message-inputs">
+                            <input type="text" id="prefijoMensaje" value="+54 9" placeholder="+54 9">
+                            <input type="text" placeholder="Prefijo (sin 0)">
+                            <input type="text" id="numeroMensaje" placeholder="Número (sin 15)">
+                        <div>
+                            <button class="sms-button">Enviar</button>
+                        </div>
+                        </div>
+                        <div class="form-buttons">
+                            <button class="btn-cancelar">Cancelar <link rel="stylesheet" href="../simulador-gestor P1/index.html"></button>
+                            <button id="btn-guardar" class="btn-guardar" disabled>Guardar <link rel="stylesheet" href="../simulador-gestor P1/index.html"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Múltiples Líneas -->
+    <div id="modal-multiple" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Gestión Múltiple - Líneas y Planes</h3>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-actions">
+                    <h4>Líneas adicionales</h4>
+                    <button id="btn-agregar-linea" class="btn-agregar">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                        Agregar Línea
+                    </button>
+                </div>
+                <div id="lineas-container"></div>
+                <div class="modal-footer">
+                    <button class="btn-cancelar" id="btn-cancelar-modal">Cancelar</button>
+                    <button class="btn-guardar" id="btn-guardar-modal">Guardar Líneas</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

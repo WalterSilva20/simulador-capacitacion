@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Portabilidad - Carga de Solicitudes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Barra de menú superior -->
+        <div class="menu-bar">
+            <span class="menu-item">Menú Principal</span>
+            <span class="menu-item">Consultas</span>
+            <span class="menu-item">Procesos</span>
+            <span class="menu-item">Window</span>
+        </div>
+
+        <!-- Título de la ventana -->
+        <div class="window-title">
+            Carga de Solicitudes de Servicio para Celular
+        </div>
+
+        <!-- Información del módulo -->
+        <div class="module-info">
+            <span>Módulo: Capacitación</span>
+            <span>Usuario: Nuevo</span>
+            <span>Versión: local</span>
+        </div>
+
+        <!-- Barra de herramientas -->
+        <div class="toolbar">
+            <div class="toolbar-btn">📁</div>
+            <div class="toolbar-btn">💾</div>
+            <div class="toolbar-btn">✂️</div>
+            <div class="toolbar-btn">📋</div>
+            <div class="toolbar-btn">↩️</div>
+            <div class="toolbar-btn">↪️</div>
+            <div class="toolbar-btn toolbar-btn-green">➕</div>
+            <div class="toolbar-btn toolbar-btn-red">❌</div>
+            <div class="toolbar-btn">⬆️</div>
+            <div class="toolbar-btn">⬇️</div>
+            <div class="toolbar-btn">⬇️</div>
+            <div class="toolbar-btn">❓</div>
+        </div>
+
+        <!-- Título de la sección -->
+        <div class="section-title">
+            CA2100 - Carga de Solicitudes de Servicio para Celular - Telemarketing
+        </div>
+
+        <!-- Pestañas -->
+        <div class="tabs-container">
+            <div class="tab active" data-tab="compania">Compañía / Ne</div>
+            <div class="tab" data-tab="cliente">Cliente / Cuenta</div>
+            <div class="tab">Condiciones</div>
+            <div class="tab">Tarjetas Prepa</div>
+            <div class="tab">Forma de Pago</div>
+            <div class="tab">Documentación</div>
+            <div class="tab">Pedidos</div>
+            <div class="tab">Datos Tarjeta</div>
+        </div>
+
+        <!-- Contenido del formulario -->
+        <div class="form-content">
+            <!-- Pestaña Compañía -->
+            <div id="tab-compania" class="tab-content active">
+                <!-- Checkboxes superiores derecha -->
+                <div class="checkboxes-top">
+                    <div class="checkbox-group-vertical">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="excepcion">
+                            <label for="excepcion">Excepción ?</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="portacion">
+                            <label for="portacion">Portación ?</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Primera fila -->
+                <div class="form-row">
+                    <div class="field-group">
+                        <label class="required-label">Campaña</label>
+                        <input type="text" id="campana" class="input-required" value="2">
+                    </div>
+                    <input type="text" id="nombreEmpresa" class="input-auto" placeholder="NOMBRE DE LA EMPRESA">
+                    <div class="field-group">
+                        <label class="required-label">Megaregión</label>
+                        <input type="text" id="megaregion" class="input-required" value="ARGENTINA">
+                    </div>
+                    <div class="field-group">
+                        <label class="required-label">Negocio</label>
+                        <input type="text" id="negocio" class="input-required input-small" value="CO">
+                    </div>
+                    <div class="field-group">
+                        <label class="required-label">Regular / P A</label>
+                        <input type="text" id="regularPA" class="input-required">
+                    </div>
+                </div>
+
+                <!-- Segunda fila -->
+                <div class="form-row">
+                    <div class="field-group">
+                        <label>Nro. Pedido</label>
+                        <input type="text" id="nroPedido" class="input-auto input-small">
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="preactivacion">
+                        <label for="preactivacion">Preactivación ?</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="cambioTitularidad">
+                        <label for="cambioTitularidad">Cambio Titularidad ?</label>
+                    </div>
+                    <div class="field-group">
+                        <label>NIM anterior</label>
+                        <input type="text" id="nimAnterior" class="input-auto">
+                    </div>
+                    <div class="field-group">
+                        <label>Nro. Serie</label>
+                        <input type="text" id="nroSerie" class="input-auto">
+                    </div>
+                </div>
+
+                <!-- Sección Entidad -->
+                <div class="section-box">
+                    <label class="section-label">Entidad</label>
+                    <div class="form-row">
+                        <div class="field-group">
+                            <label class="required-label">Entidad</label>
+                            <input type="text" id="entidad" class="input-required input-small" value="000000">
+                        </div>
+                        <input type="text" id="nombreEntidad" class="input-auto input-large" placeholder="NOMBRE DE LA ENTIDAD">
+                        <div class="field-group">
+                            <label>Vendedor</label>
+                            <input type="text" id="vendedor" class="input-auto input-tiny">
+                        </div>
+                        <input type="text" id="capacitacion" class="input-auto input-medium" placeholder="CAPACITACION">
+                    </div>
+                    <div class="form-row">
+                        <div class="field-group">
+                            <label>Pos</label>
+                            <input type="text" id="pos" class="input-auto input-small">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fila de checkboxes -->
+                <div class="form-row">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="equipoPropio">
+                        <label for="equipoPropio">Equipo Propio ?</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="porPDA">
+                        <label for="porPDA">Por PDA ?</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="migracionPPaReg">
+                        <label for="migracionPPaReg">Migración PP a Reg ?</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="fwa">
+                        <label for="fwa">FWA</label>
+                    </div>
+                    <div class="field-group">
+                        <label>NIM anterior</label>
+                        <input type="text" id="nimAnteriorReadonly" class="input-auto" readonly>
+                    </div>
+                    <div class="field-group">
+                        <label>Nro. Serie</label>
+                        <input type="text" id="nroSerieReadonly" class="input-auto" readonly>
+                    </div>
+                </div>
+
+                <!-- Sección Portación -->
+                <div class="section-box">
+                    <label class="section-label">Portación</label>
+                    <div class="form-row">
+                        <div class="field-group">
+                            <label class="required-label">Tipo de Portación</label>
+                            <input type="text" id="tipoPortacion" class="input-required input-small" value="S">
+                        </div>
+                        <div class="field-group">
+                            <label class="required-label">Negocio Actual</label>
+                            <input type="text" id="negocioActual" class="input-required" value="POSPAGO">
+                        </div>
+                        <div class="field-group">
+                            <label>Formulario</label>
+                            <input type="text" id="formulario" class="input-auto input-medium">
+                        </div>
+                        <div class="field-group">
+                            <label>Nro. SPN</label>
+                            <input type="text" id="nroSPN" class="input-auto">
+                        </div>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="spnManual">
+                        <label for="spnManual">SPN Manual ?</label>
+                    </div>
+                </div>
+
+                <!-- Sección Formulario -->
+                <div class="section-box">
+                    <label class="section-label">Formulario</label>
+                    <div class="form-row-inline">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="sdsManual">
+                            <label for="sdsManual">SDS Manual ?</label>
+                        </div>
+                        <input type="text" id="formularioSDS" class="input-auto input-medium">
+                        <label>Nro. SDS</label>
+                        <input type="text" id="nroSDS" class="input-auto">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pestaña Cliente -->
+            <div id="tab-cliente" class="tab-content">
+                <div class="form-row">
+                    <div class="field-group">
+                        <label class="required-label">DNI</label>
+                        <input type="text" id="dni" class="input-required">
+                    </div>
+                    <div class="field-group">
+                        <label class="required-label">Nombre Completo</label>
+                        <input type="text" id="nombreCompleto" class="input-required input-xlarge">
+                    </div>
+                    <div class="field-group">
+                        <label>Teléfono</label>
+                        <input type="text" id="telefono" class="input-auto input-medium">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="field-group">
+                        <label>Email</label>
+                        <input type="email" id="email" class="input-auto input-large">
+                    </div>
+                    <div class="field-group">
+                        <label>Dirección</label>
+                        <input type="text" id="direccion" class="input-auto input-xlarge">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="field-group">
+                        <label>Localidad</label>
+                        <input type="text" id="localidad" class="input-auto input-medium">
+                    </div>
+                    <div class="field-group">
+                        <label>Código Postal</label>
+                        <input type="text" id="codigoPostal" class="input-auto">
+                    </div>
+                    <div class="field-group">
+                        <label>Provincia</label>
+                        <input type="text" id="provincia" class="input-auto input-medium">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Gestor - Porta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="header-content">
+            <div class="header-left">
+                <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <div class="logo-section">
+                    <div class="logo-circle">Porta</div>
+                    <span class="app-title">Simulador de Gestor</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <span>NU</span>
+                <span>Nuevo Usuario</span>
+                <button class="exit-button">Salir <link rel="stylesheet" href="../../1-simulador-portabilidad/index.html"></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-section">
+                    <div class="sidebar-title">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        Trámites Portabilidad
+                    </div>
+                    <div class="sidebar-items">
+                        <div class="sidebar-item">
+                            <div class="sidebar-item-icon"></div>
+                            Llamado Porta In
+                        </div>
+                        <div class="sidebar-item">
+                            <div class="sidebar-item-icon"></div>
+                            Llamado Porta Lead
+                        </div>
+                        <div class="sidebar-item">
+                            <div class="sidebar-item-icon"></div>
+                            Trámite Referido Out
+                        </div>
+                        <div class="sidebar-item">
+                            <div class="sidebar-item-icon"></div>
+                            Agenda Personal
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="sidebar-title">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"></polyline>
+                        </svg>
+                        Trámites Voz
+                    </div>
+                    <div class="sidebar-items">
+                        <div class="sidebar-item">
+                            <div class="sidebar-item-icon"></div>
+                            Llamado Voz In
+                        </div>
+                        <div class="sidebar-item">
+                            <div class="sidebar-item-icon"></div>
+                            Llamado Voz Out
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="sidebar-title">Trámites BAF</div>
+                    <div class="sidebar-items">
+                        <div class="sidebar-item">
+                            <div class="sidebar-item-icon"></div>
+                            BAF In
+                        </div>
+                        <div class="sidebar-item">
+                            <div class="sidebar-item-icon"></div>
+                            BAF Out
+                        </div>
+                        <div class="sidebar-item">
+                            <div class="sidebar-item-icon"></div>
+                            BAF Lead
+                        </div>
+                        <div class="sidebar-item">
+                            <div class="sidebar-item-icon"></div>
+                            Referidos
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plus button -->
+            <div class="plus-button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <div class="content-inner">
+                <!-- Header Info -->
+                <div class="content-header">
+                    <div class="content-header-left">
+                        <div class="user-avatar">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <span>Datos del trámite</span>
+                    </div>
+                </div>
+
+                <div class="content-body">
+                    <!-- Left Area -->
+                    <div class="left-area">
+                        <div class="info-card">
+                            <div class="info-content">
+                                <span>Inicio</span>
+                                <span id="current-datetime" class="datetime"></span>
+                                <div class="user-info">
+                                    <svg class="user-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                    <span>Nuevo Usuario</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Form Area -->
+                    <div class="form-area">
+                        <div class="form-container">
+                            <div class="form-header">
+                                <h3>Información general</h3>
+                            </div>
+                            <div class="form-content">
+                                <div class="form-group">
+                                    <label>Apellido *</label>
+                                    <input type="text" id="apellido" placeholder="Apellido del contacto">
+                                    <span class="error-message" id="error-apellido">El apellido del contacto es requerido</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Nombre *</label>
+                                    <input type="text" id="nombre" placeholder="Nombre del contacto">
+                                    <span class="error-message" id="error-nombre">El nombre del contacto es requerido</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Tipo de Documento *</label>
+                                    <select id="tipoDocumento">
+                                        <option value="DNI">DNI</option>
+                                        <option value="CUIL">CUIL</option>
+                                        <option value="CUIT">CUIT</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Nro. Documento *</label>
+                                    <input type="text" id="numeroDocumento" placeholder="Nro. documento">
+                                    <span class="error-message" id="error-numeroDocumento">El número de documento es requerido</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Fecha de nac. *</label>
+                                    <div class="date-input-container">
+                                        <input type="date" id="fechaNacimiento" placeholder="Fecha de nac. (dd/mm/yyyy)">
+                                        <svg class="calendar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                                        </svg>
+                                    </div>
+                                    <span class="error-message" id="error-fechaNacimiento">La fecha de nacimiento no es correcta</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Sexo *</label>
+                                    <select id="sexo">
+                                        <option value="">Seleccione el sexo del contacto</option>
+                                        <option value="M">Masculino</option>
+                                        <option value="F">Femenino</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Nim a portar *</label>
+                                    <div class="phone-input-container">
+                                        <input type="text" id="prefijoTelefono" placeholder="Prefijo (sin 0)" class="phone-prefix">
+                                        <input type="text" id="numeroTelefono" placeholder="Número (sin 15)" class="phone-number">
+                                        <div class="red-indicator"></div>
+                                    </div>
+                                    <span class="error-message" id="error-prefijoTelefono">El código de área del Num a portar es requerido</span>
+                                    <span class="error-message" id="error-numeroTelefono">El número del Num a portar es requerido</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Teléfono adic. *</label>
+                                    <div class="phone-input-container">
+                                        <input type="text" id="prefijoAdicional" placeholder="Prefijo (sin 0)" class="phone-prefix">
+                                        <input type="text" id="numeroAdicional" placeholder="Número (sin 15)" class="phone-number">
+                                        <div class="red-indicator"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Email *</label>
+                                    <input type="email" id="email" placeholder="digital@claro.com">
+                                    <span class="error-message" id="error-email">El email es requerido</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Empresa orig. *</label>
+                                    <select id="empresaOrigen">
+                                        <option value="">Seleccione la empresa de origen</option>
+                                        <option value="Claro">Claro</option>
+                                        <option value="Movistar">Movistar</option>
+                                        <option value="Personal">Personal</option>
+                                        <option value="Tuenti">Tuenti</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Cuenta a afiliar *</label>
+                                    <input type="text" id="cuentaAfiliar" placeholder="Cuenta a afiliar">
+                                    <span class="error-message" id="error-cuentaAfiliar">La cuenta a afiliar es requerida</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Mercado orig. *</label>
+                                    <select id="mercadoOrigen">
+                                        <option value="">Seleccione el mercado de origen</option>
+                                        <option value="Postpago">Postpago</option>
+                                        <option value="Prepago">Prepago</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-buttons">
+                                    <button id="continuar-btn" class="btn-continuar" disabled>Continuar <link rel="stylesheet" href="../simulador-gestor P2/index.html"></button>
+                                    <button id="desestimar-btn" class="btn-desestimar">Desestimar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

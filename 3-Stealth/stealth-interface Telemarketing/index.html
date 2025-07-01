@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEALTH Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="stealth-container">
+        <!-- Menu Bar -->
+        <div class="menu-bar">
+            <div class="menu-items">
+                <!-- Menu Principal -->
+                <div class="menu-item" data-menu="principal">
+                    <button class="menu-button">
+                        Menú Principal
+                        <svg class="chevron-down" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-item">Seguridad de Datos</div>
+                        <div class="dropdown-item">Detección de Fraude</div>
+                        <div class="dropdown-item">Marketing</div>
+                        <div class="dropdown-item">Comisión</div>
+                        <div class="dropdown-item">Comercial <link rel="stylesheet" href="../stealth-interface Comercial/index.html"></div>
+                        <div class="dropdown-item">Documentación</div>
+                        <div class="dropdown-item">Recaudación</div>
+                        <div class="dropdown-item">Atención al Cliente</div>
+                        <div class="dropdown-item">Facturación Eventual</div>
+                        <div class="dropdown-item">Producto</div>
+                        <div class="dropdown-item">Reportes</div>
+                        <div class="dropdown-item">Gestión CPP</div>
+                        <div class="dropdown-item">Utilidades</div>
+                        <div class="dropdown-item">Atención Externa al Cliente</div>
+                        <div class="dropdown-item">Morosidad CPP Fijo</div>
+                        <div class="dropdown-item">Telematketing</div>
+                        <div class="dropdown-item">Extrajudiciales</div>
+                        <div class="dropdown-item">Intterconexión</div>
+                        <div class="dropdown-item">Conciliación</div>
+                    </div>
+                </div>
+
+                <!-- Consultas -->
+                <div class="menu-item" data-menu="consultas">
+                    <button class="menu-button">
+                        Consultas
+                        <svg class="chevron-down" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Procesos -->
+                <div class="menu-item" data-menu="procesos">
+                    <button class="menu-button">
+                        Procesos
+                        <svg class="chevron-down" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-item has-submenu" data-submenu="procesos-sub">
+                            Pedidos
+                            <svg class="chevron-right" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9,18 15,12 9,6"></polyline>
+                            </svg>
+                            <div class="submenu">
+                                <div class="dropdown-item">General</div>
+                                <div class="dropdown-item">Activaciones <link rel="stylesheet" href="../Telemarketing 1/index.html"></div>
+                                <div class="dropdown-item">Cater Telefónico</div>
+                            </div>
+                        </div>
+                        <div class="dropdown-item">Carga de solicitud de TV</div>
+                        <div class="dropdown-item">Carga de solicitud de Telefonía Fija</div>
+                        <div class="dropdown-item">Nominar</div>
+                    </div>
+                </div>
+
+                <!-- Window -->
+                <div class="menu-item" data-menu="window">
+                    <button class="menu-button">
+                        Window
+                        <svg class="chevron-down" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Title Bar -->
+        <div class="title-bar">
+            <div class="title-left">
+                <h1>Bienvenidos al Simulador de STEALTH</h1>
+            </div>
+            <div class="title-right">
+                <span>NU</span>
+                <span class="user-info">Nuevo Usuario</span>
+                <button class="exit-button">Salir</button>
+            </div>
+        </div>
+
+        <!-- Environment Info Bar -->
+        <div class="environment-bar">
+            <span>Ambiente: PRODUCCION ARGENTINA 🇦🇷</span>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Help Section -->
+            <div class="help-section">
+                <svg class="help-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="m9,9a3,3 0 1,1 6,0c0,2 -3,3 -3,3"></path>
+                    <path d="m12,17l.01,0"></path>
+                </svg>
+                <span>Necesita ayuda?</span>
+            </div>
+
+            <!-- Content Area -->
+            <div class="content-area">
+                <!-- Main content goes here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay for closing menus -->
+    <div class="overlay" id="overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

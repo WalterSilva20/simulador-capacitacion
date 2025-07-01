@@ -1,0 +1,288 @@
+/* Reset y configuración base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "MS Sans Serif", sans-serif;
+  font-size: 11px;
+  background-color: #c0c0c0;
+  color: #000;
+}
+
+.container {
+  min-height: 100vh;
+  background-color: #c0c0c0;
+}
+
+/* Barra de menú superior */
+.menu-bar {
+  background-color: #c0c0c0;
+  border-bottom: 1px solid #808080;
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+}
+
+.menu-item {
+  padding: 4px 12px;
+  cursor: pointer;
+  border-right: 1px solid #808080;
+}
+
+.menu-item:hover {
+  background-color: #0078d4;
+  color: white;
+}
+
+/* Título de la ventana */
+.window-title {
+  background-color: #0078d4;
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 13px;
+  border-bottom: 1px solid #004578;
+}
+
+/* Información del módulo */
+.module-info {
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #808080;
+  padding: 4px 8px;
+  font-size: 11px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Barra de herramientas */
+.toolbar {
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #808080;
+  padding: 4px;
+  display: flex;
+  gap: 4px;
+}
+
+.toolbar-btn {
+  width: 24px;
+  height: 24px;
+  background-color: #e0e0e0;
+  border: 1px solid #808080;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.toolbar-btn:hover {
+  background-color: #d0d0d0;
+}
+
+.toolbar-btn-green {
+  background-color: #90ee90;
+}
+
+.toolbar-btn-green:hover {
+  background-color: #80dd80;
+}
+
+.toolbar-btn-red {
+  background-color: #ffb6c1;
+}
+
+.toolbar-btn-red:hover {
+  background-color: #ffa6b1;
+}
+
+/* Título de la sección */
+.section-title {
+  background-color: #004080;
+  color: white;
+  padding: 4px 8px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* Pestañas */
+.tabs-container {
+  background-color: #c0c0c0;
+  border-bottom: 1px solid #808080;
+  display: flex;
+}
+
+.tab {
+  background-color: #c0c0c0;
+  border-top: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #808080;
+  padding: 4px 12px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.tab:hover {
+  background-color: #d0d0d0;
+}
+
+.tab.active {
+  background-color: white;
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 1px solid #808080;
+  font-weight: bold;
+}
+
+/* Contenido del formulario */
+.form-content {
+  background-color: #c0c0c0;
+  padding: 8px;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Checkboxes superiores */
+.checkboxes-top {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+
+.checkbox-group-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 12px;
+  height: 12px;
+}
+
+.checkbox-item label {
+  font-size: 11px;
+}
+
+/* Filas del formulario */
+.form-row {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 4px;
+  align-items: flex-end;
+}
+
+.form-row-inline {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Grupos de campos */
+.field-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-group label {
+  font-size: 11px;
+  margin-bottom: 2px;
+}
+
+/* Etiquetas obligatorias */
+.required-label {
+  color: #cc0000;
+  font-weight: bold;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="email"] {
+  height: 20px;
+  border: 1px solid #808080;
+  font-size: 11px;
+  padding: 0 4px;
+  font-family: "Courier New", monospace;
+}
+
+.input-required {
+  background-color: white;
+  border: 1px solid #808080;
+}
+
+.input-auto {
+  background-color: #e0e0e0;
+  border: 1px solid #808080;
+}
+
+/* Tamaños de inputs */
+.input-tiny {
+  width: 48px;
+}
+
+.input-small {
+  width: 64px;
+}
+
+.input-medium {
+  width: 128px;
+}
+
+.input-large {
+  width: 192px;
+}
+
+.input-xlarge {
+  width: 256px;
+}
+
+/* Secciones con borde */
+.section-box {
+  border: 1px solid #808080;
+  background-color: #c0c0c0;
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+.section-label {
+  font-weight: bold;
+  font-size: 11px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Estados especiales */
+input[readonly] {
+  background-color: #e0e0e0;
+  color: #666;
+}
+
+input:focus {
+  outline: 1px solid #0078d4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .form-row {
+    flex-wrap: wrap;
+  }
+
+  .tabs-container {
+    flex-wrap: wrap;
+  }
+}
