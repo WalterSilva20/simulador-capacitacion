@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Portabilidad</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Header Banner -->
+        <div class="header-banner">
+            <div class="container">
+                <h1 class="header-title">BIENVENIDO AL SIMULADOR DE PORTABILIDAD</h1>
+                <p class="header-subtitle">Simula y gestiona procesos de portabilidad de manera eficiente</p>
+            </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="nav-section">
+            <div class="container">
+                <div class="tabs-container">
+                    <div class="tabs-list">
+                        <button class="tab-trigger active" data-tab="gestor">
+                            <i class="fas fa-cog"></i>
+                            GESTOR
+                        </button>
+                        <button class="tab-trigger" data-tab="stealth">
+                            <i class="fas fa-shield-alt"></i>
+                            STEALTH
+                        </button>
+                    </div>
+
+                    <!-- Content Areas -->
+                    <div class="tabs-content">
+                        <!-- Gestor Tab Content -->
+                        <div class="tab-content active" id="gestor">
+                            <div class="content-grid">
+                                <!-- Main Action Card -->
+                                <div class="main-card">
+                                    <div class="card-header">
+                                        <div class="card-title-section">
+                                            <h2 class="card-title">
+                                                <i class="fas fa-cog"></i>
+                                                Modo Gestor
+                                            </h2>
+                                            <p class="card-description">
+                                                Administra y configura procesos de portabilidad con herramientas avanzadas
+                                            </p>
+                                        </div>
+                                        <span class="badge badge-secure">Activo</span>
+                                    </div>
+                                    <div class="card-content">
+                                        <button class="btn btn-primary btn-full">
+                                            Iniciar Simulación <link rel="stylesheet" href="../Gestor/simulador-gestor P1/index.html">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Features Card -->
+                                <div class="features-card">
+                                    <div class="card-header">
+                                        <h3 class="card-title-small">Características</h3>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="features-list">
+                                            <div class="feature-item">
+                                                <i class="fas fa-check-circle"></i>
+                                                <span>Gestión Completa</span>
+                                            </div>
+                                            <div class="feature-item">
+                                                <i class="fas fa-check-circle"></i>
+                                                <span>Guía Asesorada</span>
+                                            </div>
+                                            <div class="feature-item">
+                                                <i class="fas fa-check-circle"></i>
+                                                <span>Capacitación Avanzada</span>
+                                            </div>
+                                            <div class="feature-item">
+                                                <i class="fas fa-check-circle"></i>
+                                                <span>Prácticas en Tiempo real</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stealth Tab Content -->
+                        <div class="tab-content" id="stealth">
+                            <div class="content-grid">
+                                <!-- Stealth Mode Card -->
+                                <div class="stealth-card">
+                                    <div class="card-header">
+                                        <div class="card-title-section">
+                                            <h2 class="card-title">
+                                                <i class="fas fa-shield-alt"></i>
+                                                Modo Stealth
+                                            </h2>
+                                            <p class="card-description">
+                                                Operaciones discretas y seguras con máxima privacidad
+                                            </p>
+                                        </div>
+                                        <span class="badge badge-secure">Seguro</span>
+                                    </div>
+                                    <div class="card-content">
+                                        <button class="btn btn-stealth btn-full">
+                                            Iniciar Simulación <link rel="stylesheet" href="../Stealth/stealth-interface/index.html">
+                                            <i class="fas fa-bolt"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Security Features -->
+                                <div class="security-card">
+                                    <div class="card-header">
+                                        <h3 class="card-title-small">Características</h3>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="features-list">
+                                            <div class="feature-item">
+                                                <i class="fas fa-check-circle"></i>
+                                                <span>Consutla de Deudas</span>
+                                            </div>
+                                            <div class="feature-item">
+                                                <i class="fas fa-check-circle"></i>
+                                                <span>Envío de PIN</span>
+                                            </div>
+                                            <div class="feature-item">
+                                                <i class="fas fa-check-circle"></i>
+                                                <span>Carga de PIN</span>
+                                            </div>
+                                            <div class="feature-item">
+                                                <i class="fas fa-check-circle"></i>
+                                                <span>Estado de Trámite</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p class="footer-text">© 2025 Simulador de Portabilidad. Todos los derechos reservados.</p>
+                <p class="footer-subtext">Sistema seguro y confiable para gestión de portabilidad</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
