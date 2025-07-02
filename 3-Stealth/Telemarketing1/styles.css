@@ -12,29 +12,106 @@ body {
   color: #000;
 }
 
-.container {
+.stealth-container {
   min-height: 100vh;
-  background-color: #c0c0c0;
+  background-color: #f3f4f6;
 }
 
-/* Barra de menú superior */
+/* Menu Bar Styles */
 .menu-bar {
-  background-color: #c0c0c0;
-  border-bottom: 1px solid #808080;
+  background-color: #6b7280;
+  color: white;
+  font-size: 13px;
+  border-bottom: 1px solid #4b5563;
+  position: relative;
+  z-index: 1000;
+}
+
+.menu-items {
   display: flex;
-  align-items: center;
-  font-size: 11px;
 }
 
 .menu-item {
-  padding: 4px 12px;
-  cursor: pointer;
-  border-right: 1px solid #808080;
+  position: relative;
 }
 
-.menu-item:hover {
-  background-color: #0078d4;
+.menu-button {
+  background: none;
+  border: none;
   color: white;
+  padding: 4px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  transition: background-color 0.2s;
+}
+
+.menu-button:hover {
+  background-color: #4b5563;
+}
+
+.chevron-down,
+.chevron-right {
+  width: 12px;
+  height: 12px;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  color: black;
+  border: 1px solid #d1d5db;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  min-width: 128px;
+  z-index: 1001;
+  display: none;
+}
+
+.menu-item.active .dropdown-menu {
+  display: block;
+}
+
+.dropdown-item {
+  width: 180px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background-color 0.2s;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-item:hover {
+  background-color: #dbeafe;
+}
+
+/* Submenu Styles */
+.has-submenu {
+  position: relative;
+}
+
+.submenu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: white;
+  color: black;
+  border: 1px solid #d1d5db;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  min-width: 128px;
+  z-index: 1002;
+  display: none;
+}
+
+.has-submenu:hover .submenu {
+  display: block;
 }
 
 /* Título de la ventana */
@@ -99,6 +176,21 @@ body {
   background-color: #ffa6b1;
 }
 
+.exit-button {
+  background-color: #b91c1c;
+  color: white;
+  border: none;
+  padding: 4px 12px;
+  font-size: 13px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.exit-button:hover {
+  background-color: #991b1b;
+}
+
 /* Título de la sección */
 .section-title {
   background-color: #004080;
@@ -135,6 +227,11 @@ body {
   border-left: 2px solid #808080;
   border-right: 1px solid #808080;
   font-weight: bold;
+}
+
+
+.tab.active[data-tab]:after {
+  color: #000;
 }
 
 /* Contenido del formulario */
@@ -274,6 +371,30 @@ input[readonly] {
 
 input:focus {
   outline: 1px solid #0078d4;
+}
+
+/* Radio buttons */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.radio-options {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.radio-options input[type="radio"] {
+  width: 12px;
+  height: 12px;
+  margin-right: 4px;
+}
+
+.radio-options label {
+  font-size: 11px;
+  margin-right: 8px;
 }
 
 /* Responsive adjustments */

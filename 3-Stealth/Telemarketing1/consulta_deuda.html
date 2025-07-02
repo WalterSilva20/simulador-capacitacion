@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Portabilidad - Carga de Solicitudes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="stealth-container">
+        <!-- Menu Bar -->
+        <div class="menu-bar">
+            <div class="menu-items">
+                <!-- Menu Principal -->
+                <div class="menu-item" data-menu="principal">
+                    <button class="menu-button">
+                        Menú Principal
+                        <svg class="chevron-down" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-item">Seguridad de Datos</div>
+                        <div class="dropdown-item">Detección de Fraude</div>
+                        <div class="dropdown-item">Marketing</div>
+                        <div class="dropdown-item">Comisión</div>
+                        <div class="dropdown-item"><a href="../stealth-interface Comercial/interface_comercial.html">Comercial</a></div>
+                        <div class="dropdown-item">Documentación</div>
+                        <div class="dropdown-item">Recaudación</div>
+                        <div class="dropdown-item">Atención al Cliente</div>
+                        <div class="dropdown-item">Facturación Eventual</div>
+                        <div class="dropdown-item">Producto</div>
+                        <div class="dropdown-item">Reportes</div>
+                        <div class="dropdown-item">Gestión CPP</div>
+                        <div class="dropdown-item">Utilidades</div>
+                        <div class="dropdown-item">Atención Externa al Cliente</div>
+                        <div class="dropdown-item">Morosidad CPP Fijo</div>
+                        <div class="dropdown-item">Telematketing</div>
+                        <div class="dropdown-item">Extrajudiciales</div>
+                        <div class="dropdown-item">Intterconexión</div>
+                        <div class="dropdown-item">Conciliación</div>
+                    </div>
+                </div>
+
+                <!-- Consultas -->
+                <div class="menu-item" data-menu="consultas">
+                    <button class="menu-button">
+                        Consultas
+                        <svg class="chevron-down" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Procesos -->
+                <div class="menu-item" data-menu="procesos">
+                    <button class="menu-button">
+                        Procesos
+                        <svg class="chevron-down" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-item has-submenu" data-submenu="procesos-sub">
+                            Pedidos
+                            <svg class="chevron-right" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9,18 15,12 9,6"></polyline>
+                            </svg>
+                            <div class="submenu">
+                                <div class="dropdown-item">General</div>
+                                <div class="dropdown-item"><a href="../Telemarketing1/consulta_deuda.html">Activaciones</a></div>
+                                <div class="dropdown-item"><a href="../Telemarketing2/consulta_deuda.html">Cater Telefónico</a></div>
+                            </div>
+                        </div>
+                        <div class="dropdown-item">Carga de solicitud de TV</div>
+                        <div class="dropdown-item">Carga de solicitud de Telefonía Fija</div>
+                        <div class="dropdown-item">Nominar</div>
+                    </div>
+                </div>
+
+                <!-- Window -->
+                <div class="menu-item" data-menu="window">
+                    <button class="menu-button">
+                        Window
+                        <svg class="chevron-down" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Título de la ventana -->
+        <div class="window-title">
+            Carga de Solicitudes de Servicio para Celular
+        </div>
+
+        <!-- Información del módulo -->
+        <div class="module-info">
+            <span>Módulo: Capacitación</span>
+            <span>Usuario: Nuevo</span>
+            <a href="../stealth-interface/stealth_interface.html">
+                    <button class="exit-button">Volver</button>
+            </a>
+            <span>Versión: local</span>
+        </div>
+
+        <!-- Barra de herramientas -->
+        <div class="toolbar">
+            <div class="toolbar-btn">📁</div>
+            <div class="toolbar-btn">💾</div>
+            <div class="toolbar-btn">✂️</div>
+            <div class="toolbar-btn">📋</div>
+            <div class="toolbar-btn">↩️</div>
+            <div class="toolbar-btn">↪️</div>
+            <div class="toolbar-btn toolbar-btn-green">➕</div>
+            <div class="toolbar-btn toolbar-btn-red">❌</div>
+            <div class="toolbar-btn">⬆️</div>
+            <div class="toolbar-btn">⬇️</div>
+            <div class="toolbar-btn">⬇️</div>
+            <div class="toolbar-btn">❓</div>
+        </div>
+
+        <!-- Título de la sección -->
+        <div class="section-title">
+            CA2100 - Carga de Solicitudes de Servicio para Celular - Telemarketing
+        </div>
+
+        <!-- Pestañas -->
+        <div class="tabs-container">
+            <div class="tab-item-container">
+                <div class="tab active" data-tab="compania">Compañía / Ne</div>
+            </div>
+            <div class="tab-item-container">
+                <div class="tab" data-tab="cliente">Cliente / Cuenta</div>
+            </div>
+            <div class="tab-item-container">
+                <div class="tab" data-tab="condiciones">Condiciones</div>
+            </div>
+            <div class="tab-item-container">
+                <div class="tab" data-tab="tarjetas">Tarjetas Prepa</div>
+            </div>
+            <div class="tab-item-container">
+                <div class="tab" data-tab="pago">Forma de Pago</div>
+            </div>
+            <div class="tab-item-container">
+                <div class="tab" data-tab="documentacion">Documentación</div>
+            </div>
+            <div class="tab-item-container">
+                <div class="tab" data-tab="pedidos">Pedidos</div>
+            </div>
+            <div class="tab-item-container">
+                <div class="tab" data-tab="datos-tarjeta">Datos Tarjeta</div>
+            </div>
+        </div>
+
+        <!-- Contenido del formulario -->
+        <div class="form-content">
+            <!-- Pestaña Compañía -->
+            <div id="tab-compania" class="tab-content active">
+                <!-- Checkboxes superiores derecha -->
+                <div class="checkboxes-top">
+                    <div class="checkbox-group-vertical">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="excepcion">
+                            <label for="excepcion">Excepción ?</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="portacion">
+                            <label for="portacion">Portación ?</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Primera fila -->
+                <div class="form-row">
+                    <div class="field-group">
+                        <label class="required-label">Campaña</label>
+                        <input type="text" id="campana" class="input-required" value="2">
+                    </div>
+                    <input type="text" id="nombreEmpresa" class="input-auto" placeholder="NOMBRE DE LA EMPRESA">
+                    <div class="field-group">
+                        <label class="required-label">Megaregión</label>
+                        <input type="text" id="megaregion" class="input-required" value="ARGENTINA">
+                    </div>
+                    <div class="field-group">
+                        <label class="required-label">Negocio</label>
+                        <input type="text" id="negocio" class="input-required input-small" value="CO">
+                    </div>
+                    <div class="field-group">
+                        <label class="required-label">Regular / P A</label>
+                        <input type="text" id="regularPA" class="input-required">
+                    </div>
+                </div>
+
+                <!-- Segunda fila -->
+                <div class="form-row">
+                    <div class="field-group">
+                        <label>Nro. Pedido</label>
+                        <input type="text" id="nroPedido" class="input-auto input-small">
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="preactivacion">
+                        <label for="preactivacion">Preactivación ?</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="cambioTitularidad">
+                        <label for="cambioTitularidad">Cambio Titularidad ?</label>
+                    </div>
+                    <div class="field-group">
+                        <label>NIM anterior</label>
+                        <input type="text" id="nimAnterior" class="input-auto">
+                    </div>
+                    <div class="field-group">
+                        <label>Nro. Serie</label>
+                        <input type="text" id="nroSerie" class="input-auto">
+                    </div>
+                </div>
+
+                <!-- Sección Entidad -->
+                <div class="section-box">
+                    <label class="section-label">Entidad</label>
+                    <div class="form-row">
+                        <div class="field-group">
+                            <label class="required-label">Entidad</label>
+                            <input type="text" id="entidad" class="input-required input-small" value="000000">
+                        </div>
+                        <input type="text" id="nombreEntidad" class="input-auto input-large" placeholder="NOMBRE DE LA ENTIDAD">
+                        <div class="field-group">
+                            <label>Vendedor</label>
+                            <input type="text" id="vendedor" class="input-auto input-tiny">
+                        </div>
+                        <input type="text" id="capacitacion" class="input-auto input-medium" placeholder="CAPACITACION">
+                    </div>
+                    <div class="form-row">
+                        <div class="field-group">
+                            <label>Pos</label>
+                            <input type="text" id="pos" class="input-auto input-small">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fila de checkboxes -->
+                <div class="form-row">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="equipoPropio">
+                        <label for="equipoPropio">Equipo Propio ?</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="porPDA">
+                        <label for="porPDA">Por PDA ?</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="migracionPPaReg">
+                        <label for="migracionPPaReg">Migración PP a Reg ?</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="fwa">
+                        <label for="fwa">FWA</label>
+                    </div>
+                    <div class="field-group">
+                        <label>NIM anterior</label>
+                        <input type="text" id="nimAnteriorReadonly" class="input-auto" readonly>
+                    </div>
+                    <div class="field-group">
+                        <label>Nro. Serie</label>
+                        <input type="text" id="nroSerieReadonly" class="input-auto" readonly>
+                    </div>
+                </div>
+
+                <!-- Sección Portación -->
+                <div class="section-box">
+                    <label class="section-label">Portación</label>
+                    <div class="form-row">
+                        <div class="field-group">
+                            <label class="required-label">Tipo de Portación</label>
+                            <input type="text" id="tipoPortacion" class="input-required input-small" value="S">
+                        </div>
+                        <div class="field-group">
+                            <label class="required-label">Negocio Actual</label>
+                            <input type="text" id="negocioActual" class="input-required" value="POSPAGO">
+                        </div>
+                        <div class="field-group">
+                            <label>Formulario</label>
+                            <input type="text" id="formulario" class="input-auto input-medium">
+                        </div>
+                        <div class="field-group">
+                            <label>Nro. SPN</label>
+                            <input type="text" id="nroSPN" class="input-auto">
+                        </div>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="spnManual">
+                        <label for="spnManual">SPN Manual ?</label>
+                    </div>
+                </div>
+
+                <!-- Sección Formulario -->
+                <div class="section-box">
+                    <label class="section-label">Formulario</label>
+                    <div class="form-row-inline">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="sdsManual">
+                            <label for="sdsManual">SDS Manual ?</label>
+                        </div>
+                        <input type="text" id="formularioSDS" class="input-auto input-medium">
+                        <label>Nro. SDS</label>
+                        <input type="text" id="nroSDS" class="input-auto">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pestaña Cliente -->
+            <div id="tab-cliente" class="tab-content">
+                <!-- Sección Prospecto -->
+                <div class="section-box">
+                    <label class="section-label">Prospecto</label>
+                    <div class="form-row">
+                        <div class="field-group">
+                            <label class="required-label">Tipo y Nro. Docum.</label>
+                            <input type="text" id="tipoDocumento" class="input-required input-small" value="DNI">
+                        </div>
+                        <input type="text" id="nroDocumento" class="input-required input-medium" placeholder="Número de documento">
+                        <div class="field-group">
+                            <label class="required-label">Apellido Cliente / Razón Social</label>
+                            <input type="text" id="apellidoCliente" class="input-auto input-large">
+                        </div>
+                        <div class="field-group">
+                            <label class="required-label">Nombre Cliente</label>
+                            <input type="text" id="nombreCliente" class="input-auto input-large">
+                        </div>
+                        <div class="field-group">
+                            <label class="required-label">Sexo</label>
+                            <input type="text" id="sexo" class="input-auto input-small">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="field-group">
+                            <label>Fecha Nac.</label>
+                            <input type="text" id="fechaNacimiento" class="input-auto input-medium">
+                        </div>
+                        <div class="field-group">
+                            <label>Condición IVA</label>
+                            <input type="text" id="condicionIVA" class="input-auto input-medium">
+                        </div>
+                        <div class="field-group">
+                            <label>Condición de 1 BB</label>
+                            <input type="text" id="condicion1BB" class="input-auto input-medium">
+                        </div>
+                        <div class="field-group">
+                            <label>Nro. Inscrip. IIBB</label>
+                            <input type="text" id="nroInscripIIBB" class="input-auto input-medium">
+                        </div>
+                        <div class="field-group">
+                            <label>Proyecto SAP</label>
+                            <input type="text" id="proyectoSAP" class="input-auto input-medium">
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="clienteGobierno">
+                            <label for="clienteGobierno">Cliente de Gobierno</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección intermedia -->
+                <div class="form-row">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="crearCuentaNueva">
+                        <label for="crearCuentaNueva">Crear Cuenta Nueva?</label>
+                    </div>
+                    <div class="field-group">
+                        <label>Busca Cuenta</label>
+                        <input type="text" id="buscaCuenta" class="input-auto input-medium">
+                    </div>
+                    <div class="field-group">
+                        <label>Cuenta</label>
+                        <input type="text" id="cuenta" class="input-auto input-medium">
+                    </div>
+                    <div class="field-group">
+                        <label>Calificación</label>
+                        <input type="text" id="calificacion" class="input-auto input-medium">
+                    </div>
+                    <div class="field-group">
+                        <label>Rango Scoring</label>
+                        <input type="text" id="rangoScoring" class="input-auto input-medium">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="field-group">
+                        <label>Cod. Area</label>
+                        <input type="text" id="codArea" class="input-auto input-small">
+                    </div>
+                    <div class="field-group">
+                        <label>Tel. Titular</label>
+                        <input type="text" id="telTitular" class="input-auto input-medium">
+                    </div>
+                    <div class="field-group">
+                        <label>E-Mail</label>
+                        <input type="email" id="emailCliente" class="input-auto input-large">
+                    </div>
+                    <div class="field-group">
+                        <label>¿Tiene otra línea celular? Nro</label>
+                        <input type="text" id="otraLineaCelular" class="input-auto input-medium">
+                    </div>
+                    <div class="radio-group">
+                        <label class="required-label">Datos Personales</label>
+                        <div class="radio-options">
+                            <input type="radio" id="datosPersonalesSi" name="datosPersonales" value="Si">
+                            <label for="datosPersonalesSi">Si</label>
+                            <input type="radio" id="datosPersonalesNo" name="datosPersonales" value="No">
+                            <label for="datosPersonalesNo">No</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección Solicitante Responsable -->
+                <div class="section-box">
+                    <label class="section-label">Solicitante Responsable</label>
+                    <div class="form-row">
+                        <div class="field-group">
+                            <label>Tipo y Nro. Docum.</label>
+                            <input type="text" id="tipoDocSolicitante" class="input-auto input-small">
+                        </div>
+                        <input type="text" id="nroDocSolicitante" class="input-auto input-medium">
+                        <div class="field-group">
+                            <label>Apellido Solicitante</label>
+                            <input type="text" id="apellidoSolicitante" class="input-auto input-large">
+                        </div>
+                        <div class="field-group">
+                            <label>Nombre Solicitante</label>
+                            <input type="text" id="nombreSolicitante" class="input-auto input-large">
+                        </div>
+                        <div class="field-group">
+                            <label>Sexo</label>
+                            <input type="text" id="sexoSolicitante" class="input-auto input-small">
+                        </div>
+                        <div class="field-group">
+                            <label>Tel Part/Comercial/Solicitante</label>
+                            <input type="text" id="telSolicitante" class="input-auto input-medium">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección Usuario -->
+                <div class="section-box">
+                    <label class="section-label">Usuario</label>
+                    <div class="form-row">
+                        <div class="field-group">
+                            <label>Tipo y Nro. Docum.</label>
+                            <input type="text" id="tipoDocUsuario" class="input-auto input-small">
+                        </div>
+                        <input type="text" id="nroDocUsuario" class="input-auto input-medium">
+                        <div class="field-group">
+                            <label>Apellido Usuario</label>
+                            <input type="text" id="apellidoUsuario" class="input-auto input-large">
+                        </div>
+                        <div class="field-group">
+                            <label class="required-label">Nombre Usuario</label>
+                            <input type="text" id="nombreUsuario" class="input-auto input-large">
+                        </div>
+                        <div class="field-group">
+                            <label>Tel Part/Comercial/Titular</label>
+                            <input type="text" id="telUsuario" class="input-auto input-medium">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección Domicilio a Facturar -->
+                <div class="section-box">
+                    <label class="section-label">Domicilio a Facturar</label>
+                    <div class="form-row">
+                        <div class="field-group">
+                            <label class="required-label">CPA</label>
+                            <input type="text" id="cpa" class="input-required input-small">
+                        </div>
+                        <div class="field-group">
+                            <label class="required-label">Calle</label>
+                            <input type="text" id="calle" class="input-required input-large">
+                        </div>
+                        <div class="field-group">
+                            <label class="required-label">Número</label>
+                            <input type="text" id="numero" class="input-required input-small">
+                        </div>
+                        <div class="field-group">
+                            <label>Piso</label>
+                            <input type="text" id="piso" class="input-auto input-small">
+                        </div>
+                        <div class="field-group">
+                            <label>Depto.</label>
+                            <input type="text" id="depto" class="input-auto input-small">
+                        </div>
+                        <div class="field-group">
+                            <label>Casilla Correo</label>
+                            <input type="text" id="casillaCorreo" class="input-auto input-medium">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="field-group">
+                            <label>Aclaraciones para el cartero</label>
+                            <input type="text" id="aclaracionesCartero" class="input-auto input-xlarge">
+                        </div>
+                        <div class="field-group">
+                            <label class="required-label">Localidad</label>
+                            <input type="text" id="localidadFacturar" class="input-required input-medium">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="field-group">
+                            <label>Barrio</label>
+                            <input type="text" id="barrio" class="input-auto input-medium">
+                        </div>
+                        <div class="field-group">
+                            <label>Departamento</label>
+                            <input type="text" id="departamento" class="input-auto input-medium">
+                        </div>
+                        <div class="field-group">
+                            <label class="required-label">Provincia</label>
+                            <input type="text" id="provinciaFacturar" class="input-required input-medium">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
