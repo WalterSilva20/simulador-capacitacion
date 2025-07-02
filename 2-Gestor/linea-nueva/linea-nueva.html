@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Gestor - BAF</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Unified Header -->
+        <div class="header">
+            <div class="header-left">
+                <!-- Menu Icon -->
+                <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+
+                <!-- Simulador de Gestor -->
+                <div class="header-section">
+                    <div class="logo-circle">LN</div>
+                    <span class="header-title">Simulador de Gestor</span>
+                </div>
+
+                <!-- Trámite de Voz Out -->
+                <div class="header-section">
+                    <span class="header-title">-  Trámite de Voz Out</span>
+                </div>
+            </div>
+
+            <div class="header-right">
+                <span class="user-text">NU</span>
+                <span class="user-text">Nuevo Usuario</span>
+                <a href="../../index.html">
+                    <button class="btn-salir">Salir</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Main content with sidebar and form -->
+        <div class="main-content">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <nav class="sidebar-nav">
+                    <div class="nav-section">
+                        <div class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span>Trámites Portabilidad</span>
+                        </div>
+                        <div class="nav-subitems">
+                            <div class="nav-subitem">
+                                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <span>Llamado Porta In</span>
+                            </div>
+                            <div class="nav-subitem">
+                                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <span>Llamado Porta Lead</span>
+                            </div>
+                            <div class="nav-subitem">
+                                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <span>Trámite Referido Out</span>
+                            </div>
+                            <div class="nav-subitem">
+                                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <span>Agenda Personal</span>
+                            </div>
+                        </div>
+
+                        <div class="nav-item">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span>Trámites Voz</span>
+                        </div>
+                        <div class="nav-subitems">
+                            <div class="nav-subitem">
+                                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <span>Llamado Voz In</span>
+                            </div>
+                            <div class="nav-subitem">
+                                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <a href="../linea-nueva/linea-nueva.html">
+                                    <span>Llamado Voz Out</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="nav-item active">Trámites BAF</div>
+                        <div class="nav-subitems">
+                            <div class="nav-subitem">
+                                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <span>BAF In</span>
+                            </div>
+                            <div class="nav-subitem">
+                                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <a href="../baf-tramites/baf.html">
+                                    <span>BAF Out</span>
+                                </a>
+                            </div>
+                            <div class="nav-subitem">
+                                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <span>BAF Lead</span>
+                            </div>
+                            <div class="nav-subitem">
+                                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <span>Referidos</span>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Pink circle at bottom -->
+                <div class="sidebar-bottom">
+                    <div class="pink-circle">+</div>
+                </div>
+            </div>
+
+            <!-- Form Content -->
+            <div class="form-container">
+                <div class="form-content">
+                    <!-- Información personal -->
+                    <div class="form-section">
+                        <div class="section-header-fixed">
+                            <h2>Información personal</h2>
+                        </div>
+                        <div class="section-content-fixed">
+                            <div class="form-row four-cols">
+                                <div class="form-group">
+                                    <label for="apellido">Apellido <span class="required-asterisk">*</span></label>
+                                    <input type="text" id="apellido" class="form-input" placeholder="Apellido del contacto">
+                                </div>
+                                <div class="form-group">
+                                    <label for="nombre">Nombre <span class="required-asterisk">*</span></label>
+                                    <input type="text" id="nombre" class="form-input" placeholder="Nombre del contacto">
+                                </div>
+                                <div class="form-group">
+                                    <label for="fechaNacimiento">Fecha nacimiento <span class="required-asterisk">*</span></label>
+                                    <input type="date" id="fechaNacimiento" class="form-input" placeholder="Fecha de nac. (dd/mm/yyyy)">
+                                </div>
+                                <div class="form-group">
+                                    <label for="sexo">Sexo</label>
+                                    <select id="sexo" class="form-select">
+                                        <option value="">Seleccione el sexo</option>
+                                        <option value="masculino">Masculino</option>
+                                        <option value="femenino">Femenino</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row four-cols">
+                                <div class="form-group">
+                                    <label for="tipoDocumento">Tipo de Documento <span class="required-asterisk">*</span></label>
+                                    <select id="tipoDocumento" class="form-select">
+                                        <option value="">Seleccione Doc.</option>
+                                        <option value="dni">DNI</option>
+                                        <option value="pasaporte">Pasaporte</option>
+                                        <option value="cedula">Cédula</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nroDocumento">Nro. Documento <span class="required-asterisk">*</span></label>
+                                    <input type="text" id="nroDocumento" class="form-input" placeholder="Nro. Documento">
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefonoContacto">Teléfono de Contacto <span class="required-asterisk">*</span></label>
+                                    <div class="phone-group">
+                                        <input type="text" id="prefijoContacto" class="form-input phone-prefix" placeholder="Pref (ej: 0)">
+                                        <input type="text" id="telefonoContacto" class="form-input phone-number" placeholder="Número (sin 15)">
+                                        <div class="phone-icon-red">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefonoAdicional">Telef. adic.</label>
+                                    <div class="phone-group">
+                                        <input type="text" id="prefijoAdicional" class="form-input phone-prefix" placeholder="Pref (ej: 0)">
+                                        <input type="text" id="telefonoAdicional" class="form-input phone-number" placeholder="Número (sin 15)">
+                                        <div class="phone-icon-red">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group full-width">
+                                    <label for="email">Email <span class="required-asterisk">*</span></label>
+                                    <input type="email" id="email" class="form-input" placeholder="Email">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gestión del plan -->
+                    <div class="form-section">
+                        <div class="section-header-fixed">
+                            <h2>Gestión del plan</h2>
+                        </div>
+                        <div class="section-content-fixed">
+                            <div class="form-row three-cols">
+                                <div class="form-group">
+                                    <label for="campana">Campaña <span class="required-asterisk">*</span></label>
+                                    <select id="campana" class="form-select">
+                                        <option value="">Seleccione la campaña</option>
+                                        <option value="campana1">Campaña 1</option>
+                                        <option value="campana2">Campaña 2</option>
+                                        <option value="campana3">Campaña 3</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="promocion">Promoción <span class="required-asterisk">*</span></label>
+                                    <select id="promocion" class="form-select">
+                                        <option value="">Seleccione la promoción</option>
+                                        <option value="promo1">Promoción 1</option>
+                                        <option value="promo2">Promoción 2</option>
+                                        <option value="promo3">Promoción 3</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="abonoElegido">Abono elegido <span class="required-asterisk">*</span></label>
+                                    <select id="abonoElegido" class="form-select">
+                                        <option value="">Seleccione el abono del plan</option>
+                                        <option value="abono1">Abono 1</option>
+                                        <option value="abono2">Abono 2</option>
+                                        <option value="abono3">Abono 3</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <div class="toggle-container">
+                                        <label for="multiple">Múltiple</label>
+                                        <div class="toggle-switch">
+                                            <input type="checkbox" id="multiple" class="toggle-input">
+                                            <label for="multiple" class="toggle-label"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Domicilio de envío -->
+                    <div class="form-section">
+                        <div class="section-header-fixed">
+                            <h2>Domicilio de envío</h2>
+                        </div>
+                        <div class="section-content-fixed">
+                            <div class="form-row four-cols">
+                                <div class="form-group">
+                                    <label for="calle">Calle <span class="required-asterisk">*</span></label>
+                                    <input type="text" id="calle" class="form-input" placeholder="Calle">
+                                </div>
+                                <div class="form-group">
+                                    <label for="numero">Nro. <span class="required-asterisk">*</span></label>
+                                    <input type="text" id="numero" class="form-input" placeholder="Nro.">
+                                </div>
+                                <div class="form-group">
+                                    <label for="piso">Piso</label>
+                                    <input type="text" id="piso" class="form-input" placeholder="Piso">
+                                </div>
+                                <div class="form-group">
+                                    <label for="depto">Depto.</label>
+                                    <input type="text" id="depto" class="form-input" placeholder="Depto.">
+                                </div>
+                            </div>
+
+                            <div class="form-row four-cols">
+                                <div class="form-group">
+                                    <label for="pais">País <span class="required-asterisk">*</span></label>
+                                    <select id="pais" class="form-select">
+                                        <option value="">Argentina</option>
+                                        <option value="argentina">Argentina</option>
+                                        <option value="chile">Chile</option>
+                                        <option value="uruguay">Uruguay</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="provincia">Provincia <span class="required-asterisk">*</span></label>
+                                    <select id="provincia" class="form-select">
+                                        <option value="">Seleccione la provincia</option>
+                                        <option value="buenosaires">Buenos Aires</option>
+                                        <option value="cordoba">Córdoba</option>
+                                        <option value="santafe">Santa Fe</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="localidad">Localidad <span class="required-asterisk">*</span></label>
+                                    <select id="localidad" class="form-select">
+                                        <option value="">Seleccione la localidad</option>
+                                        <option value="caba">CABA</option>
+                                        <option value="laplata">La Plata</option>
+                                        <option value="rosario">Rosario</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cp">CP <span class="required-asterisk">*</span></label>
+                                    <input type="text" id="cp" class="form-input" placeholder="Cód. Postal">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="franjaHoraria">Franja horaria <span class="required-asterisk">*</span></label>
+                                    <select id="franjaHoraria" class="form-select">
+                                        <option value="">Seleccione la franja horaria</option>
+                                        <option value="manana">Mañana (8:00 - 12:00)</option>
+                                        <option value="tarde">Tarde (12:00 - 18:00)</option>
+                                        <option value="noche">Noche (18:00 - 22:00)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group full-width">
+                                    <label for="observacionesCartero">Observaciones para el cartero</label>
+                                    <textarea id="observacionesCartero" class="form-textarea" rows="2" placeholder="Observaciones para el cartero"></textarea>
+                                    <div class="char-counter">0 / 30</div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <div class="toggle-container">
+                                        <label for="domicilioFacturacion">¿Utiliza domicilio de facturación para envío?</label>
+                                        <div class="toggle-switch">
+                                            <input type="checkbox" id="domicilioFacturacion" class="toggle-input">
+                                            <label for="domicilioFacturacion" class="toggle-label"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" class="btn-frecuenciador">
+                                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                                        </svg>
+                                        Ver frecuenciador
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Característica/Prefijo -->
+                    <div class="form-section">
+                        <div class="section-header-fixed">
+                            <h2>Característica/Prefijo</h2>
+                        </div>
+                        <div class="section-content-fixed">
+                            <div class="form-row four-cols">
+                                <div class="form-group">
+                                    <label for="caracteristicaPrefijo">Característica/Prefijo</label>
+                                    <input type="text" id="caracteristicaPrefijo" class="form-input" placeholder="Característica/Prefijo">
+                                </div>
+                                <div class="form-group">
+                                    <label for="bloque">Bloque <span class="required-asterisk">*</span></label>
+                                    <select id="bloque" class="form-select">
+                                        <option value="">Seleccione el bloque</option>
+                                        <option value="bloque1">Bloque 1</option>
+                                        <option value="bloque2">Bloque 2</option>
+                                        <option value="bloque3">Bloque 3</option>
+                                    </select>
+                                    <div class="error-message">El Bloque es requerido</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cpBloque">CP Bloque</label>
+                                    <select id="cpBloque" class="form-select">
+                                        <option value="">Seleccione el Código Postal</option>
+                                        <option value="cp1">CP 1001</option>
+                                        <option value="cp2">CP 1002</option>
+                                        <option value="cp3">CP 1003</option>
+                                    </select>
+                                    <div class="error-message">¿CP Bloque es requerido?</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="producto">Producto <span class="required-asterisk">*</span></label>
+                                    <select id="producto" class="form-select">
+                                        <option value="">Seleccione el producto</option>
+                                        <option value="producto1">Producto 1</option>
+                                        <option value="producto2">Producto 2</option>
+                                        <option value="producto3">Producto 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Forma de pago -->
+                    <div class="form-section">
+                        <div class="section-header-fixed">
+                            <h2>Forma de pago</h2>
+                        </div>
+                        <div class="section-content-fixed">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="metodoPago">Método de pago <span class="required-asterisk">*</span></label>
+                                    <select id="metodoPago" class="form-select">
+                                        <option value="">Seleccione la forma de pago</option>
+                                        <option value="tarjeta">Tarjeta de crédito</option>
+                                        <option value="debito">Débito automático</option>
+                                        <option value="efectivo">Efectivo</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cuenta a añadir -->
+                    <div class="form-section">
+                        <div class="section-header-fixed">
+                            <h2>Cuenta a añadir</h2>
+                        </div>
+                        <div class="section-content-fixed">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="text" id="cuentaAnadir" class="form-input" placeholder="Cuenta a añadir">
+                                </div>
+                                <div class="form-group verification-group">
+                                    <label>Verificación</label>
+                                    <button type="button" class="btn-microphone">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                                            <line x1="12" y1="19" x2="12" y2="23"></line>
+                                            <line x1="8" y1="23" x2="16" y2="23"></line>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Observaciones -->
+                    <div class="form-section">
+                        <div class="section-header-fixed">
+                            <h2>Observaciones</h2>
+                        </div>
+                        <div class="section-content-fixed">
+                            <div class="form-row">
+                                <div class="form-group full-width">
+                                    <textarea id="observacionesGenerales" class="form-textarea large" rows="4" placeholder="Observaciones generales"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <button type="button" class="btn-historial">
+                                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <polyline points="12,6 12,12 16,14"></polyline>
+                                        </svg>
+                                        Ver historial de observaciones
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom buttons -->
+                <div class="bottom-buttons">
+                    <a href="../../index.html">
+                        <button type="button" class="btn-cancelar">Cancelar</button>
+                    </a>
+                    <a href="../simulador-gestor_P1/gestor_P1.html">
+                        <button type="button" class="btn-guardar">Guardar</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

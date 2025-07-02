@@ -373,3 +373,5 @@ window.SimuladorGestor = {
 
 // Initialize when DOM is loaded
 document.addEventListener("DOMContentLoaded", init)
+
+
